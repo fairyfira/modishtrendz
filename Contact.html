@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modish Trendz - Contact</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E6E6FA;
+            color: #333;
+        }
+        .header {
+            background-color: #D8BFD8;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .header .logo img {
+            max-width: 100px;
+            vertical-align: middle;
+        }
+        .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .header .logo img:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #DDA0DD;
+        }
+        .nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #DDA0DD;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #DDA0DD;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #DDA0DD; 
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #BA55D3; 
+        }
+        .social-buttons {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .social-buttons a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #D8BFD8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin: 0 5px;
+        }
+        .social-buttons a img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .social-buttons a:hover {
+            background-color: #af7ac5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="announcement">ENHANCE YOUR BEAUTY WITH OUR PRODUCTS</div>
+        <div class="logo">
+            <a href="Home.html">
+                <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+            </a>
+        </div>
+        <a href="cart.html" class="view-cart">
+            <img src="cart-icon.png" alt="Cart Icon">
+        </a>
+        <a href="wishlist.html" class="view-wishlist">
+            <img src="wishlist-icon.png" alt="Wishlist Icon">
+        </a>
+    </div>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
+        <a href="New Arrivals.html">New Arrivals</a>
+        <a href="Best Sellers.html">Best Sellers</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="your-server-side-script" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-buttons">
+            <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER">
+                <img src="whatsapp-icon.png" alt="WhatsApp Icon"> WhatsApp Us
+            </a>
+            <a href="https://www.instagram.com/modish_trendz_?igsh=bXM3OTRiY3Zoc29q">
+                <img src="instagram-icon.png" alt="Instagram Icon"> Instagram
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

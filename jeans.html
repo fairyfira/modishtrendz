@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeans - Modish Trendz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #D6BBFC;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .header .logo img:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #B19CD9;
+        }
+        .nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .main {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .main .intro {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .main .intro span {
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .product button {
+            padding: 10px;
+            background-color: #B19CD9;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: #D6BBFC;
+        }
+        .product button.add-to-wishlist {
+            background-color: #E6E6FA;
+            color: #333;
+            margin-left: 10px;
+        }
+        .product button.add-to-wishlist:hover {
+            background-color: #D6BBFC;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #D6BBFC;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="announcement">ENHANCE YOUR BEAUTY WITH OUR PRODUCTS</div>
+        <div class="logo">
+            <a href="Home.html">
+                <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+            </a>
+        </div>
+        <a href="cart.html" class="view-cart">
+            <img src="cart-icon.png" alt="Cart Icon">
+        </a>
+        <a href="wishlist.html" class="view-wishlist">
+            <img src="wishlist-icon.png" alt="Wishlist Icon">
+        </a>
+    </div>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
+        <a href="New Arrivals.html">New Arrivals</a>
+        <a href="Best Sellers.html">Best Sellers</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="main">
+        <div class="intro">
+            Discover our latest <span>jeans collection</span> and find your perfect fit.
+        </div>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="jeans1.jpg" alt="Classic Blue Jeans">
+                <h3>Classic Blue Jeans</h3>
+                <p>$40.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Classic Blue Jeans', 40.00)">Add to Cart</button>
+                <button class="add-to-wishlist" onclick="addToWishlist('Classic Blue Jeans')">Add to Wishlist</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="jeans2.jpg" alt="Distressed Denim">
+                <h3>Distressed Denim</h3>
+                <p>$45.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Distressed Denim', 45.00)">Add to Cart</button>
+                <button class="add-to-wishlist" onclick="addToWishlist('Distressed Denim')">Add to Wishlist</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="jeans3.jpg" alt="Slim Fit Jeans">
+                <h3>Slim Fit Jeans</h3>
+                <p>$50.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Slim Fit Jeans', 50.00)">Add to Cart</button>
+                <button class="add-to-wishlist" onclick="addToWishlist('Slim Fit Jeans')">Add to Wishlist</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="jeans4.jpg" alt="High Waist Jeans">
+                <h3>High Waist Jeans</h3>
+                <p>$55.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('High Waist Jeans', 55.00)">Add to Cart</button>
+                <button class="add-to-wishlist" onclick="addToWishlist('High Waist Jeans')">Add to Wishlist</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="jeans5.jpg" alt="Bootcut Jeans">
+                <h3>Bootcut Jeans</h3>
+                <p>$60.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Bootcut Jeans', 60.00)">Add to Cart</button>
+                <button class="add-to-wishlist" onclick="addToWishlist('Bootcut Jeans')">Add to Wishlist</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        SHOP WITH US
+    </footer>
+
+ <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            alert(`${product} has been added to your cart.`);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function addToWishlist(product) {
+            if (!wishlist.includes(product)) {
+                wishlist.push(product);
+                alert(`${product} has been added to your wishlist.`);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            } else {
+                alert(`${product} is already in your wishlist.`);
+            }
+        }
+    </script>
+
+</body>
+</html>

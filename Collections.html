@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modish Trendz - Collections</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E6E6FA;
+            color: #333;
+        }
+
+        .header {
+            background-color: #D8BFD8;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .header .logo img:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #DDA0DD;
+        }
+
+        .nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .collections {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .collections .intro {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product h3 {
+            color: black;
+            font-weight: bold;
+        }
+
+        .product .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .product .add-to-cart,
+        .product .add-to-wishlist {
+            width: 100%;
+            font-size: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background-color: #DDA0DD;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .product .add-to-cart:hover,
+        .product .add-to-wishlist:hover {
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: 500ms ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="announcement">ENHANCE YOUR BEAUTY WITH OUR PRODUCTS</div>
+        <div class="logo">
+            <a href="Home.html">
+                <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+            </a>
+        </div>
+        <a href="cart.html" class="view-cart">
+            <img src="cart-icon.png" alt="Cart Icon">
+        </a>
+        <a href="wishlist.html" class="view-wishlist">
+            <img src="wishlist-icon.png" alt="Wishlist Icon">
+        </a>
+    </div>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
+        <a href="New Arrivals.html">New Arrivals</a>
+        <a href="Best Sellers.html">Best Sellers</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="collections">
+        <div class="intro">
+            Explore our <span>Exclusive Collections</span>
+        </div>
+        <div class="products">
+
+            <div class="product">
+                <img src="baby blue top.avif" alt="Product 1" width="100%">
+                <h3>Baby Blue Top</h3>
+                <p>$30.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Baby Blue Top', 30.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Baby Blue Top')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="purple top.avif" alt="Product 2" width="97.5%">
+                <h3>Purple Top</h3>
+                <p>$25.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Purple Top', 25.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Purple Top')">Favorite</button>
+                </div>
+            </div>
+            <!-- Add more products here -->
+
+            <div class="product">
+                <img src="navy blue baby tee.png" alt="Navy Blue Baby Tee" width="97.5%">
+                <h3>Navy Baby Tee</h3>
+                <p>$40.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Navy Baby Tee', 40.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Navy Baby Tee')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="white baby tee.avif" alt="White Baby Tee" width="100%">
+                <h3>White Baby Tee</h3>
+                <p>$20.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('White Baby Tee', 20.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('White Baby Tee')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="pink baby tee.avif" alt="Pink Baby Tee" width="100%">
+                <h3>Pink Baby Tee</h3>
+                <p>$35.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Pink Baby Tee', 35.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Pink Baby Tee')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="gray baby tee.avif" alt="Gray Baby Tee" width="100%">
+                <h3>Gray Baby Tee</h3>
+                <p>$28.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Gray Baby Tee', 28.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Gray Baby Tee')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="Baby Tee Cropped.avif" alt="Product 7" width="100%">
+                <h3>White Tee Cropped</h3>
+                <p>$45.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('White Tee Cropped', 45.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('White Tee Cropped')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="SOFT LOUNGE CROPPED T-SHIRT.jpg" alt="Soft Lounge Cropped Tee" width="100%">
+                <h3>Soft Lounge Cropped Tee</h3>
+                <p>$22.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Soft Lounge Cropped Tee', 22.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Soft Lounge Cropped Tee')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="COTTON JERSEY LONG SLEEVE T-SHIRT LIGHT GREY.jpg" alt="Product 9" width="100%">
+                <h3>Grey Cotton Long Sleeve</h3>
+                <p>$38.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Grey Cotton Long Sleeve', 38.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Grey Cotton Long Sleeve')">Favorite</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="Green Long Sleeve Crop Top.jpg" alt="Green Long Sleeve Crop Top" width="100%">
+                <h3>Green Long Sleeve Crop Top</h3>
+                <p>$26.00 USD</p>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart('Green Long Sleeve Crop Top', 26.00)">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Green Long Sleeve Crop Top')">Favorite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(product, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let item = {
+                product: product,
+                price: price
+            };
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product} has been added to your cart.`);
+        }
+
+        function addToWishlist(product) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            if (!wishlist.includes(product)) {
+                wishlist.push(product);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                alert(`${product} has been added to your wishlist.`);
+            } else {
+                alert(`${product} is already in your wishlist.`);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

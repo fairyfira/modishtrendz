@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modish Trendz - Blog Page 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #5bc8ac;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .header .announcement {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+        }
+                .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .header .logo img:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #a0d3e8;
+        }
+        .nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .main {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .main .intro {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .main .intro span {
+            font-weight: bold;
+        }
+        .main .shop-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .main .shop-buttons div {
+            background-color: #d8b0d6;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: white;
+        }
+        .main .shop-buttons div:hover {
+            background-color: #bba1c5;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product button {
+            padding: 10px;
+            background-color: #5bc8ac;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: #3ea494;
+        }
+        .subscribe {
+            background-color: #5bc8ac;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+        .subscribe input[type="email"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #3ea494;
+            border-radius: 4px;
+        }
+        .subscribe button {
+            padding: 10px 20px;
+            background-color: #3ea494;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .subscribe button:hover {
+            background-color: #2f7f6d;
+        }
+        .blog {
+            padding: 40px 20px;
+        }
+        .blog .post {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog .post h2 {
+            margin-top: 0;
+        }
+        .blog .post p {
+            font-size: 14px;
+            color: #777;
+        }
+        .blog .post a {
+            text-decoration: none;
+            color: #5bc8ac;
+            font-weight: bold;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 50%;
+            background-color: #5bc8ac;
+            display: inline-block;
+            margin: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .pagination a:hover {
+            background-color: #3ea494;
+            color: white;
+        }
+        .pagination .active {
+            background-color: #3ea494;
+            color: white;
+            border: 1px solid #3ea494;
+        }
+        .pagination .prev,
+        .pagination .next {
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5bc8ac;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="announcement">ENHANCE YOUR BEAUTY WITH OUR PRODUCTS</div>
+        <div class="logo">
+            <a href="Home.html">
+                <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+                       </a>
+        </div>
+        <a href="cart.html" class="view-cart">
+            <img src="cart-icon.png" alt="Cart Icon">
+        </a>
+        <a href="wishlist.html" class="view-wishlist">
+            <img src="wishlist-icon.png" alt="Wishlist Icon">
+        </a>
+    </div>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
+        <a href="New Arrivals.html">New Arrivals</a>
+        <a href="Best Sellers.html">Best Sellers</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="blog">
+        <h2>Latest from Our Blog</h2>
+        <div class="post">
+            <h2><a href="blog-post8.html">A Guide to Lip Gloss Application</a></h2>
+            <p>Learn how to apply lip gloss perfectly every time. This guide covers techniques for a smooth, glossy finish that lasts.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post9.html">Top Lip Gloss Shades for Every Skin Tone</a></h2>
+            <p>Find the best lip gloss shades that complement your skin tone. Discover which colors will make your lips pop.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post10.html">Maintaining Healthy Lips</a></h2>
+            <p>Keep your lips healthy and moisturized with our tips. Learn how to prevent chapping and maintain a smooth, soft pout.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post11.html">Choosing the Perfect Basic Tee</a></h2>
+            <p>Find out how to choose the perfect basic tee for your wardrobe. Learn about different fits, fabrics, and styles to match your personal taste.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post12.html">How to Style Basic Tees for Any Occasion</a></h2>
+            <p>Discover versatile ways to style basic tees for any occasion. From casual outings to dressier events, learn how to make the most of this wardrobe staple.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post13.html">The Importance of Fashion Accessories</a></h2>
+            <p>Learn why accessories are essential in fashion. Discover how to choose and style accessories to elevate your outfits.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post14.html">Seasonal Fashion Trends</a></h2>
+            <p>Stay updated with the latest seasonal fashion trends. Find out what's in style and how to incorporate these trends into your wardrobe.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post15.html">Sustainable Fashion: What You Need to Know</a></h2>
+            <p>Explore the world of sustainable fashion. Learn how to make eco-friendly fashion choices and why it's important.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post16.html">Building a Capsule Wardrobe</a></h2>
+            <p>Learn how to build a capsule wardrobe that works for any occasion. Find out which key pieces to include for a versatile and stylish collection.</p>
+        </div>
+        <div class="post">
+            <h2><a href="blog-post17.html">Fashion Tips for Every Body Type</a></h2>
+            <p>Discover fashion tips that cater to different body types. Learn how to dress to accentuate your best features and feel confident.</p>
+        </div>
+
+
+        <div class="pagination">
+            <a href="blog-page1.html" class="prev">&laquo; Previous</a>
+            <a href="blog.html" class="page-number">1</a>
+            <a href="blog-page2.html" class="page-number active">2</a>
+            <a href="blog-page3.html" class="page-number">3</a>
+            <a href="blog-page3.html" class="next">Next &raquo;</a>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <h2>Stay Glamorous</h2>
+        <p>Be the first to discover new products and exclusive offers.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </div>
+
+    <footer>
+        SHOP WITH US
+    </footer>
+
+    <p align="center"> &copy; 2024 GLAMOROUS LASHES CO. </p>
+
+</body>
+</html>

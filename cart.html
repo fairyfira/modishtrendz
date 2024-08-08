@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Modish Trendz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #008080;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+        }
+                .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .header .logo img:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004d4d;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-details, .cart-actions {
+            width: 48%;
+        }
+
+        .cart-container h2 {
+            color: #008080;
+        }
+
+        .cart-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-container ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-container ul li button {
+            background-color: #9FE2BF;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 0; 
+            transition: background-color 0.3s;
+        }
+
+        .cart-container ul li button:hover {
+            background-color: #F8BBD0;
+        }
+
+        .cart-container .total {
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            color: #008080;
+            margin-top: 20px;
+        }
+
+        .cart-container .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: #008080; 
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .cart-container .checkout-btn:hover {
+            background-color: #004d4d;
+        }
+
+        .cart-container .empty {
+            text-align: left;
+            font-size: 18px;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="announcement">ENHANCE YOUR BEAUTY WITH OUR PRODUCTS</div>
+    <div class="logo">
+        <a href="Home.html">
+            <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+        </a>
+    </div>
+</div>
+    
+<div class="nav">
+    <a href="Home.html">Home</a>
+    <a href="New Arrivals.html">New Arrivals</a>
+    <a href="Best Sellers.html">Best Sellers</a>
+    <a href="Collections.html">Collections</a>
+    <a href="Blog.html">Blog</a>
+    <a href="Contact.html">Contact</a>
+</div>
+
+<div class="cart-container">
+    <div class="cart-details">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <div class="total">Total: $<span id="totalPrice">0.00</span> USD</div>
+    </div>
+    <div class="cart-actions">
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+<script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCart() {
+        const cartItems = document.getElementById('cartItems');
+        const totalPrice = document.getElementById('totalPrice');
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<li class="empty">Your cart is empty.</li>';
+        } else {
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.product} - $${item.price.toFixed(2)} USD <button onclick="removeFromCart(${index})">Remove</button>`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+        }
+
+        totalPrice.textContent = total.toFixed(2);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCart);
+</script>
+
+</body>
+</html>

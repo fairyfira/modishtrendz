@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush - Modish Trendz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #D6BBFC;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .header .logo img {
+            max-width: 150px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .header .logo img:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #B19CD9;
+        }
+        .nav a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .main {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .main .intro {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .main .intro span {
+            font-weight: bold;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product button {
+            padding: 10px;
+            background-color: #FF69B4;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: #BA55D3 ;
+        }
+        .product .wishlist-button {
+            background-color: #BA55D3;
+        }
+        .product .wishlist-button:hover {
+            background-color: #F08080;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #FF69B4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="announcement">Blush</div>
+        <div class="logo">
+            <a href="Home.html">
+                <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+            </a>
+        </div>
+        <a href="cart.html" class="view-cart">
+            <img src="cart-icon.png" alt="Cart Icon">
+        </a>
+        <a href="wishlist.html" class="view-wishlist">
+            <img src="wishlist-icon.png" alt="Wishlist Icon">
+        </a>
+    </div>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
+        <a href="New Arrivals.html">New Arrivals</a>
+        <a href="Best Sellers.html">Best Sellers</a>
+        <a href="Collections.html">Collections</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="main">
+        <div class="intro">
+            Check out our latest <span>blush and lip gloss.</span>
+        </div>
+        <div class="products">
+
+            <div class="product">
+                <img src="blush1.jpg" alt="Blush 1" width="100%">
+                <h3>Blush</h3>
+                <p>$20.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Blush', 20.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Blush', 20.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="blush2.jpg" alt="Blush 2" width="100%">
+                <h3>Blush 2</h3>
+                <p>$22.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Blush 2', 22.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Blush 2', 22.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="blush3.jpg" alt="Blush 3" width="100%">
+                <h3>Blush 3</h3>
+                <p>$24.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Blush 3', 24.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Blush 3', 24.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="blush4.jpg" alt="New Lash 4" width="100%">
+                <h3>Blush 4</h3>
+                <p>$6.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('New Lash 4', 26.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Blush 4', 26.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="blush5.jpg" alt="New Lash 5" width="100%">
+                <h3>Blush 5</h3>
+                <p>$8.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('New Lash 5', 28.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Blush 5', 24.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="blush6.jpg" alt="New Lash 6" width="100%">
+                <h3>Blush 6</h3>
+                <p>$30.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('New Lash 6', 30.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Blush 6', 24.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                 <img src="Victoria's Secret Lip Flavor Favorites.jpg" alt="Victoria's Secret Lip Flavor Favorites" width="100%">
+                <h3>Victoria's Secret Lip Flavor Favorites</h3>
+                 <p>$32.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Victoria\'s Secret Lip Flavor Favorites', 32.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Victoria\'s Secret Lip Flavor Favorites', 32.00)">Add to Wishlist</button>
+            </div>
+            
+            <div class="product">
+                <img src="Victoria's Secret Strawberry Fizz Lip Gloss.jpg" alt="Victoria's Secret Strawberry Fizz Lip Gloss" width="100%">
+                <h3>Victoria's Secret Strawberry Fizz Lip Gloss</h3>
+                <p>$34.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Victoria\'s Secret Strawberry Fizz Lip Gloss', 34.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Victoria\'s Secret Strawberry Fizz Lip Gloss', 34.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="Victoria's Secret Cherry Bomb.jpg" alt="Victoria's Secret Cherry Bomb" width="100%">
+                <h3>Victoria's Secret Cherry Bomb</h3>
+                <p>$36.00 USD</p>
+              <button class="add-to-cart" onclick="addToCart('Victoria\'s Secret Cherry Bomb', 36.00)">Add to Cart</button>
+              <button class="wishlist-button" onclick="addToWishlist('Victoria\'s Secret Cherry Bomb', 36.00)">Add to Wishlist</button>
+            </div>
+
+        <div class="product">
+                <img src="Victoria's Secret Sugar High.jpg" alt="Victoria's Secret Sugar High" width="100%">
+                <h3>Victoria's Secret Sugar High</h3>
+                <p>$38.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Victoria\'s Secret Sugar High', 38.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Victoria\'s Secret Sugar High', 38.00)">Add to Wishlist</button>
+            </div>
+
+            <div class="product">
+                <img src="Victoria’s Secret Coconut Craze Lipgloss.jpg" alt="Victoria’s Secret Coconut Craze Lipgloss" width="100%">
+                <h3>Victoria’s Secret Coconut Craze Lipgloss</h3>
+                <p>$48.00 USD</p>
+                <button class="add-to-cart" onclick="addToCart('Victoria’s Secret Coconut Craze Lipgloss', 48.00)">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist('Victoria’s Secret Coconut Craze Lipgloss', 48.00)">Add to Wishlist</button>
+            </div>
+        </div>
+    </div>
+
+<footer>
+        SHOP WITH US
+    </footer>
+
+ <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            alert(`${product} has been added to your cart.`);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function addToWishlist(product) {
+            if (!wishlist.includes(product)) {
+                wishlist.push(product);
+                alert(`${product} has been added to your wishlist.`);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            } else {
+                alert(`${product} is already in your wishlist.`);
+            }
+        }
+    </script>
+
+
+</body>
+</html>
