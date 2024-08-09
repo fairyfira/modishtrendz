@@ -17,10 +17,17 @@
             padding: 20px;
             text-align: center;
             color: white;
+            position: relative;
         }
-        .header .logo img {
-            max-width: 100px;
-            vertical-align: middle;
+        .header .announcement {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .header .logo {
+            display: inline-block;
+        }
+        .header .logo a {
+            display: block;
         }
         .header .logo img {
             max-width: 150px;
@@ -31,6 +38,22 @@
         .header .logo img:hover {
             transform: scale(1.05);
             opacity: 0.7;
+        }
+        .header .view-cart,
+        .header .view-wishlist {
+            position: absolute;
+            top: 20px;
+            display: inline-block;
+        }
+        .header .view-cart {
+            right: 80px;
+        }
+        .header .view-wishlist {
+            right: 20px;
+        }
+        .header .view-cart img,
+        .header .view-wishlist img {
+            max-width: 30px;
         }
         .nav {
             display: flex;
@@ -110,9 +133,9 @@
         <div class="announcement">ENHANCE YOUR BEAUTY WITH OUR LASHES</div>
         <div class="logo">
             <a href="index.html">
-                <img src="ModishTrendz4.png" alt="Modish Trendz Logo" style="max-width: 500px; vertical-align: middle;">
+                <img src="ModishTrendz4.png" alt="Modish Trendz Logo">
             </a>
-               </div>
+        </div>
         <a href="cart.html" class="view-cart">
             <img src="cart-icon.png" alt="Cart Icon">
         </a>
