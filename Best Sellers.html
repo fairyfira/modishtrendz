@@ -327,12 +327,24 @@
         SHOP WITH US
     </footer>
 
-    <script>
+ <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
         function addToCart(product, price) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ product: product, price: price });
+            cart.push({ product, price });
+            alert(`${product} has been added to your cart.`);
             localStorage.setItem('cart', JSON.stringify(cart));
-            alert('Item added to cart!');
+        }
+
+        function addToWishlist(product) {
+            if (!wishlist.includes(product)) {
+                wishlist.push(product);
+                alert(`${product} has been added to your wishlist.`);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            } else {
+                alert(`${product} is already in your wishlist.`);
+            }
         }
     </script>
 
