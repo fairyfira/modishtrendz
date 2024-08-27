@@ -7,7 +7,6 @@
     <title>Nail Sets - Modish Trendz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -61,6 +60,26 @@
             font-weight: bold;
         }
 
+        .wishlist {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .wishlist h1 {
+            font-size: 28px;
+            color: #5bc8ac;
+        }
+
+        .wishlist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .wishlist li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
         .products {
             display: flex;
             justify-content: center;
@@ -101,12 +120,11 @@
             border-radius: 4px;
             transition: background-color 0.3s;
             margin-top: 10px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 5px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .product button:hover {
@@ -138,8 +156,9 @@
             <img src="wishlist-icon.png" alt="Wishlist Icon">
         </a>
     </div>
-        <div class="nav">
-        <a href="index.html">Home</a>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
         <a href="New Arrivals.html">New Arrivals</a>
         <a href="Best Sellers.html">Best Sellers</a>
         <a href="Collections.html">Collections</a>
@@ -149,112 +168,119 @@
 
     <div class="products">
 
-                <div class="product">
+        <div class="product">
             <img src="nailset1.png" alt="Nail Set 1">
             <h3>Cherry Bow Nails</h3>
             <p>$15.00 USD</p>
-                    <button onclick="addToCart('Cherry Bow Nails', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Cherry Bow Nails')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Cherry Bow Nails', 15.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Cherry Bow Nails')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
         <div class="product">
             <img src="nailset2.png" alt="Nail Set 2">
             <h3>Dark Red French Tips Bow Nails</h3>
             <p>$18.00 USD</p>
-                    <button onclick="addToCart('Dark Red French Tips Bow Nails', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Dark Red French Tips Bow Nails')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Dark Red French Tips Bow Nails', 18.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Dark Red French Tips Bow Nails')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
 
         <div class="product">
-            <img src="nailset3.png" alt="Nail Set 2">
+            <img src="nailset3.png" alt="Nail Set 3">
             <h3>Almond Rainbow French Tip</h3>
             <p>$18.00 USD</p>
-            <button onclick="addToCart('Almond Rainbow French Tip', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Almond Rainbow French Tip')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Almond Rainbow French Tip', 18.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Almond Rainbow French Tip')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
-<div class="product">
-            <img src="nailset4.png" alt="Nail Set 2">
+        <div class="product">
+            <img src="nailset4.png" alt="Nail Set 4">
             <h3>Green Almond French tip</h3>
             <p>$18.00 USD</p>
-                        <button onclick="addToCart('Green Almond French tip', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Green Almond French tip')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Green Almond French tip', 18.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Green Almond French tip')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
-<div class="product">
-            <img src="strawberry shortcake.jpg" alt="Nail Set 2">
+        <div class="product">
+            <img src="strawberry shortcake.jpg" alt="Nail Set 5">
             <h3>Strawberry Shortcake</h3>
             <p>$18.00 USD</p>
-                                   <button onclick="addToCart('Strawberry Shortcake', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Strawberry Shortcake')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Strawberry Shortcake', 18.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Strawberry Shortcake')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
         <div class="product">
-            <img src="nailset5.png" alt="Nail Set 2">
+            <img src="nailset5.png" alt="Nail Set 6">
             <h3>Pink Ocean Set</h3>
             <p>$18.00 USD</p>
-                                   <button onclick="addToCart('Pink Ocean Set', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Pink Ocean Set')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Pink Ocean Set', 18.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Pink Ocean Set')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
         <div class="product">
-            <img src="nailset6.png" alt="Nail Set 2">
+            <img src="nailset6.png" alt="Nail Set 7">
             <h3>Pearl Flower Set</h3>
             <p>$18.00 USD</p>
-                                               <button onclick="addToCart('Pearl Flower Set', 30.00)">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                    <button onclick="addToWishlist('Pearl Flower Set')">
-                        <i class="fas fa-heart"></i> Favorite
-                    </button>
+            <button onclick="addToCart('Pearl Flower Set', 18.00)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Pearl Flower Set')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
+
         <div class="product">
-            <img src="nailset7.png" alt="Nail Set 2">
+            <img src="nailset7.png" alt="Nail Set 8">
             <h3>Flower Set</h3>
             <p>$18.00 USD</p>
-            <button onclick="addToCart('Flower Set
-', 18.00)">
+            <button onclick="addToCart('Flower Set', 18.00)">
                 <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Flower Set')">
+                <i class="fas fa-heart"></i> Favorite
             </button>
         </div>
         <div class="product">
-            <img src="nailset8.png" alt="Nail Set 2">
-            <h3>Cute flower pink nails</h3>
+            <img src="nailset8.png" alt="Nail Set 9">
+            <h3>Cute Flower Pink Nails</h3>
             <p>$18.00 USD</p>
-            <button onclick="addToCart('Cute flower pink nails
-', 18.00)">
+            <button onclick="addToCart('Cute Flower Pink Nails', 18.00)">
                 <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button onclick="addToWishlist('Cute Flower Pink Nails')">
+                <i class="fas fa-heart"></i> Favorite
             </button>
         </div>
         <div class="product">
-            <img src="nailset9.png" alt="Nail Set 2">
-            <h3>Fairy nails</h3>
+            <img src="nailset9.png" alt="Nail Set 10">
+            <h3>Fairy Nails</h3>
             <p>$18.00 USD</p>
-            <button onclick="addToCart('Fairy nails
-', 18.00)">
+            <button onclick="addToCart('Fairy Nails', 18.00)">
                 <i class="fas fa-shopping-cart"></i> Add to Cart
             </button>
+            <button onclick="addToWishlist('Fairy Nails')">
+                <i class="fas fa-heart"></i> Favorite
+            </button>
         </div>
-        
+
     </div>
 
     <footer>
@@ -283,6 +309,8 @@
             }
         }
     </script>
+
 </body>
 
 </html>
+
